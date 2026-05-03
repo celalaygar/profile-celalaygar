@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Navbar } from "@/components/sections/navbar";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
@@ -22,9 +21,9 @@ export default function Home() {
         <GamesSection limit={4} />
         <InterviewSection limit={4} />
         <MediumSection limit={4} />
-        <AboutSection />
+        <AboutSection compact />
         <SocialSection />
-        <ContactSection />
+        <ContactSection compact />
       </main>
       <Footer />
     </>

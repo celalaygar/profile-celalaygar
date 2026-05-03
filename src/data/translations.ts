@@ -64,6 +64,8 @@ export const translations: Record<Language, Record<string, string>> = {
     gamesPageTitle: "All Games",
     interviewPageTitle: "All Interview Questions",
     mediumPageTitle: "All Medium Articles",
+    aboutPageTitle: "About Me",
+    contactPageTitle: "Contact Me",
 
     wb_domain_track_subtitle: "Coming Soon",
     wb_domain_track_desc: "Find Your Perfect Domain With Ease",
@@ -203,6 +205,8 @@ export const translations: Record<Language, Record<string, string>> = {
     gamesPageTitle: "Tüm Oyunlar",
     interviewPageTitle: "Tüm Mülakat Soruları",
     mediumPageTitle: "Tüm Medium Yazıları",
+    aboutPageTitle: "Hakkımda",
+    contactPageTitle: "İletişim",
 
     wb_domain_track_subtitle: "Yakında",
     wb_domain_track_desc: "Mükemmel Alan Adınızı Kolayca Bulun",

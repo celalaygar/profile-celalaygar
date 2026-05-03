@@ -13,8 +13,8 @@ const navItems = [
   { key: "menu_games", href: "/games" },
   { key: "menu_interview", href: "/interview" },
   { key: "menu_medium", href: "/medium" },
-  { key: "menu_about", href: "/#about" },
-  { key: "menu_contact", href: "/#contact" },
+  { key: "menu_about", href: "/about" },
+  { key: "menu_contact", href: "/contact" },
 ];
 
 export function Navbar() {
