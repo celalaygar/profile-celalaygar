@@ -1,22 +1,26 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Code2 } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { key: "menu_projects", href: "#projects" },
-  { key: "menu_games", href: "#games" },
-  { key: "menu_interview", href: "#interview" },
-  { key: "menu_about", href: "#about" },
-  { key: "menu_contact", href: "#contact" },
+  { key: "menu_projects", href: "/projects" },
+  { key: "menu_games", href: "/games" },
+  { key: "menu_interview", href: "/interview" },
+  { key: "menu_medium", href: "/medium" },
+  { key: "menu_about", href: "/#about" },
+  { key: "menu_contact", href: "/#contact" },
 ];
 
 export function Navbar() {
   const { language, setLanguage, t } = useLanguage();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <motion.nav
@@ -27,24 +31,31 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <a href="#" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <Code2 className="h-6 w-6 text-violet-400" />
             <span className="text-lg font-bold text-white">
               {t("logo")}
             </span>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-1">
-            {navItems.map((item) => (
-              <a
-                key={item.key}
-                href={item.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
-              >
-                {t(item.key)}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href.split("/")[1] ? `/${item.href.split("/")[1]}` : item.href));
+              return (
+                <Link
+                  key={item.key}
+                  href={item.href}
+                  className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                    isActive
+                      ? "text-violet-400 bg-violet-500/10"
+                      : "text-gray-300 hover:bg-white/10 hover:text-white"
+                  }`}
+                >
+                  {t(item.key)}
+                </Link>
+              );
+            })}
             <div className="ml-4 flex items-center border-l border-white/10 pl-4">
               <Button
                 variant="ghost"
@@ -91,14 +102,14 @@ export function Navbar() {
           >
             <div className="space-y-1 px-4 py-3">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.key}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
                   className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
                 >
                   {t(item.key)}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>

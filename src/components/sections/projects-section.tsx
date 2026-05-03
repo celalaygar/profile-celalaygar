@@ -1,14 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
 import { projects } from "@/data";
 import { getIcon } from "@/components/icon-map";
 import { getGradientBgClass } from "@/lib/utils-gradient";
 import { ExternalLink } from "lucide-react";
 
-export function ProjectsSection() {
+interface ProjectsSectionProps {
+  limit?: number;
+}
+
+export function ProjectsSection({ limit }: ProjectsSectionProps) {
   const { t } = useLanguage();
+  const displayProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
     <section id="projects" className="bg-gray-900 py-20">
@@ -27,7 +34,7 @@ export function ProjectsSection() {
         </motion.div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, idx) => {
+          {displayProjects.map((project, idx) => {
             const Icon = getIcon(project.iconName);
             return (
               <motion.div
@@ -63,6 +70,23 @@ export function ProjectsSection() {
             );
           })}
         </div>
+
+        {limit && projects.length > limit && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mt-8 text-center"
+          >
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-violet-500/20"
+            >
+              {t("view_all")}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </motion.div>
+        )}
       </div>
     </section>
   );

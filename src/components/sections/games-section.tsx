@@ -1,14 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
 import { games } from "@/data";
 import { getIcon } from "@/components/icon-map";
 import { getGradientBgClass } from "@/lib/utils-gradient";
-import { ExternalLink } from "lucide-react";
 
-export function GamesSection() {
+interface GamesSectionProps {
+  limit?: number;
+}
+
+export function GamesSection({ limit }: GamesSectionProps) {
   const { t } = useLanguage();
+  const displayGames = limit ? games.slice(0, limit) : games;
 
   return (
     <section id="games" className="bg-gray-950 py-20">
@@ -27,7 +33,7 @@ export function GamesSection() {
         </motion.div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {games.map((game, idx) => {
+          {displayGames.map((game, idx) => {
             const Icon = getIcon(game.iconName);
             return (
               <motion.div
@@ -63,6 +69,23 @@ export function GamesSection() {
             );
           })}
         </div>
+
+        {limit && games.length > limit && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mt-8 text-center"
+          >
+            <Link
+              href="/games"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-amber-500/20"
+            >
+              {t("view_all")}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </motion.div>
+        )}
       </div>
     </section>
   );

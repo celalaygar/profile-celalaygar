@@ -1,14 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
 import { interviews } from "@/data";
 import { getIcon } from "@/components/icon-map";
 import { getGradientBgClass } from "@/lib/utils-gradient";
-import { ExternalLink } from "lucide-react";
 
-export function InterviewSection() {
+interface InterviewSectionProps {
+  limit?: number;
+}
+
+export function InterviewSection({ limit }: InterviewSectionProps) {
   const { t } = useLanguage();
+  const displayInterviews = limit ? interviews.slice(0, limit) : interviews;
 
   return (
     <section id="interview" className="bg-gray-900 py-20">
@@ -27,7 +33,7 @@ export function InterviewSection() {
         </motion.div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {interviews.map((interview, idx) => {
+          {displayInterviews.map((interview, idx) => {
             const Icon = getIcon(interview.iconName);
             return (
               <motion.div
@@ -73,6 +79,23 @@ export function InterviewSection() {
             );
           })}
         </div>
+
+        {limit && interviews.length > limit && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mt-8 text-center"
+          >
+            <Link
+              href="/interview"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-pink-500 to-rose-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl hover:shadow-pink-500/20"
+            >
+              {t("view_all")}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </motion.div>
+        )}
       </div>
     </section>
   );

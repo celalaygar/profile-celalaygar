@@ -1,33 +1,26 @@
 ---
-Task ID: 1
+Task ID: 2
 Agent: Main Agent
-Task: Build celalaygar.com portfolio page with Next.js, Tailwind, shadcn/ui, Three.js, TR/EN i18n
+Task: Restructure site with separate pages and 4-item limit on home page, add Medium articles
 
 Work Log:
-- Initialized fullstack project with fullstack-dev skill
-- Installed three, @react-three/fiber, @react-three/drei, @types/three
-- Created data layer: translations.ts, index.ts (all data from user)
-- Created LanguageProvider context for TR/EN switching
-- Created utility files: utils-gradient.ts, icon-map.tsx, social-icons.tsx
-- Created Three.js 3D hero scene (StarField + FloatingParticles)
-- Created Navbar with mobile menu and language switcher
-- Created Hero section with 3D background, TikTok stats, social buttons
-- Created Projects section with 5 project cards
-- Created Games section with 18 game cards in 4-column grid
-- Created Interview section with 7 interview question cards + tags
-- Created About section with bio text + 14 skill badges
-- Created Social section with 6 social media cards
-- Created Contact section with contact channels, social links grid, and contact form
-- Created Footer with branding
-- Assembled main page.tsx with LanguageProvider wrapper
-- Updated layout.tsx with celalaygar.com metadata
-- Ran lint (clean) and verified dev server (200 OK)
+- Added MediumArticle interface and 16 medium articles to data/index.ts
+- Added translation keys for Medium section, View All buttons, page titles, Back to Home in both TR and EN
+- Moved LanguageProvider from page.tsx to layout.tsx (shared across all pages)
+- Updated Navbar with Next.js Link components pointing to /projects, /games, /interview, /medium, /#about, /#contact
+- Added active state detection for nav items based on pathname
+- Updated ProjectsSection, GamesSection, InterviewSection with optional `limit` prop
+- Created MediumSection component with limit prop, BookOpen icons, 2-column layout
+- Updated home page (page.tsx) to pass limit={4} to each section
+- Created PageHeader component with back-to-home link, title, subtitle, gradient bar
+- Created /projects/page.tsx, /games/page.tsx, /interview/page.tsx, /medium/page.tsx
+- Each section shows "View All" button when limit is set and items exceed limit
+- All pages tested: / returns 200, /projects 200, /games 200, /interview 200, /medium 200
+- Lint passes clean
 
 Stage Summary:
-- Complete portfolio page for celalaygar.com built and running
-- All user data integrated: contacts, projects, games, interviews, skills, social links, translations
-- TR/EN language switching via context provider
-- Three.js animated star field + floating particles in hero
-- Framer Motion animations throughout
-- Dark theme with glass-morphism effects
-- Responsive design with mobile navigation
+- Site restructured: home page shows 4 items per section with "View All" buttons
+- 4 separate pages created: /projects, /games, /interview, /medium
+- Medium articles section added with 16 articles
+- PageHeader shared component with "Back to Home" navigation
+- Navbar updated with links to all separate pages + active state

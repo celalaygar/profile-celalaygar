@@ -242,6 +242,112 @@ export const socialSectionLinks: SocialLink[] = [
   { id: "github", name: "GitHub", href: "https://github.com/celalaygar", iconType: "github", gradient: "bg-gradient-to-r from-gray-700 to-gray-900", hoverColor: "hover:opacity-90" },
 ];
 
+export interface MediumArticle {
+  id: string;
+  title: string;
+  shortDescription: string;
+  link: string;
+}
+
+export const mediumArticles: MediumArticle[] = [
+  {
+    id: "medium-1",
+    title: "Mikroservislerde Yarış Koşulu (Race Condition)",
+    shortDescription: "Monolitik sistemlerde, synchronized veya ReentrantLock ile JVM seviyesinde kaynakları koruyabiliriz. Ancak mikroservislerde, uygulamanızın…",
+    link: "https://medium.com/@celalaygar/mikroservislerde-yarış-koşulu-race-condition-cbe487450fea",
+  },
+  {
+    id: "medium-2",
+    title: "Kafka ile \"Transactional Outbox Pattern\" ve Veri Tutarlılığı",
+    shortDescription: "Transactional Outbox Pattern ve Debezium ile Veri Tutarlılığı",
+    link: "https://medium.com/@celalaygar/kafka-ile-transactional-outbox-pattern-ve-veri-tutarlılığı-1011f2eed084",
+  },
+  {
+    id: "medium-3",
+    title: "Virtual Threads ve Spring Boot'ta Kullanımı",
+    shortDescription: "Geleneksel olarak Java'da eşzamanlı (concurrent) programlama, her bir java.lang.Thread'in işletim sistemi (OS) düzeyinde bir iş parçacığına…",
+    link: "https://medium.com/@celalaygar/virtual-threads-sanal-i̇ş-parçacıkları-ve-spring-bootta-kullanımı-d06be37de8f5",
+  },
+  {
+    id: "medium-4",
+    title: "Dinamik İstek Gövdeleri (Dynamic Request Bodies) Spring Boot",
+    shortDescription: "Bu makalede, Spring Boot uygulamasında tek bir REST endpoint üzerinden, gelen requestin içeriğine göre farklı Java sınıflarına (objelere)…",
+    link: "https://medium.com/@celalaygar/dinamik-i̇stek-gövdeleri-dynamic-request-bodies-spring-boot-7f2a13f2710b",
+  },
+  {
+    id: "medium-5",
+    title: "Spring Boot: Spring MVC ve WebFlux Arasındaki Farklar",
+    shortDescription: "Geleneksel Spring MVC ve imperative (emir kipi) programlama yaklaşımıdır. WebFlux ise reactive (tepkisel) programlama modelini kullanır. Bu…",
+    link: "https://medium.com/@celalaygar/spring-boot-spring-mvc-ve-webflux-arasındaki-farklar-158d1fb1b5a8",
+  },
+  {
+    id: "medium-6",
+    title: "Spring Boot ve Hystrix kullanımı",
+    shortDescription: "Spring Boot ve Hystrix kullanımını detaylı bir şekilde açıklamak için, önce Hystrix'in ne olduğunu ve neden kullanıldığını anlamak…",
+    link: "https://medium.com/@celalaygar/spring-boot-ve-hystrix-kullanımı-0bbe9a3a48f7",
+  },
+  {
+    id: "medium-7",
+    title: "MongoDB'de normalizasyon ve denormalizasyon",
+    shortDescription: "MongoDB'de veritabanı tasarımı iki temel yaklaşıma dayanır: normalizasyon ve denormalizasyon. Bu yaklaşımları ve aralarındaki farkları…",
+    link: "https://medium.com/@celalaygar/mongodbde-normalizasyon-ve-denormalizasyon-d9d0ad46c3a1",
+  },
+  {
+    id: "medium-8",
+    title: "SQL'de normalizasyon nedir?",
+    shortDescription: "SQL veritabanlarında normalizasyon, veritabanı tasarımında veri fazlalığını ve tutarsızlıkları azaltmak amacıyla veritabanı tablolarının…",
+    link: "https://medium.com/@celalaygar/sqlde-normalizasyon-nedir-5a2b177e9e10",
+  },
+  {
+    id: "medium-9",
+    title: "PostgreSql de UNION ve UNION ALL kullanımı ve arasındaki farklar",
+    shortDescription: "PostgreSQL'de UNION ve UNION ALL ifadeleri, iki veya daha fazla sorgunun sonuçlarını birleştirmek için kullanılır. Aralarındaki temel fark…",
+    link: "https://medium.com/@celalaygar/postgresql-de-union-ve-union-all-kullanımı-ve-arasındaki-farklar-17b233b188a1",
+  },
+  {
+    id: "medium-10",
+    title: "Spring Boot ile Resilience4j",
+    shortDescription: "Resilience4j, mikroservislerin hata toleransını ve dayanıklılığını artırmak için kullanılan bir kütüphanedir. Temel olarak, devre kesici…",
+    link: "https://medium.com/@celalaygar/spring-boot-ileresilience4j-9219294fe684",
+  },
+  {
+    id: "medium-11",
+    title: "Postgresql de index tipleri",
+    shortDescription: "1. B-Tree Indeksler",
+    link: "https://medium.com/@celalaygar/postgresql-de-index-tipleri-f1315cfb06a5",
+  },
+  {
+    id: "medium-12",
+    title: "Spring Boot üzerinde cron job'ları kullanmak",
+    shortDescription: "Spring Boot üzerinde cron job'ları kullanmak oldukça basittir. Cron job'lar, belirli zaman aralıklarında veya belirli zamanlarda…",
+    link: "https://medium.com/@celalaygar/spring-boot-üzerinde-cron-jobları-kullanmak-5edd336279cd",
+  },
+  {
+    id: "medium-13",
+    title: "MongoDB'de indeksleme",
+    shortDescription: "MongoDB'de indeksleme, sorgu performansını artırmak ve veri tabanı operasyonlarını hızlandırmak için önemli bir işlemdir. MongoDB'de…",
+    link: "https://medium.com/@celalaygar/mongodbde-indeksleme-3f00143a1a59",
+  },
+  {
+    id: "medium-14",
+    title: "MongoDB ve SQL veritabanları arasında temel farklar",
+    shortDescription: "MongoDB ve SQL veritabanları arasında temel farklar, veri yapıları, sorgulama dilleri, esneklik ve ölçeklenebilirlik gibi çeşitli konularda…",
+    link: "https://medium.com/@celalaygar/mongodb-ve-sql-veritabanları-arasında-temel-farklar-dbec9aad4f7f",
+  },
+  {
+    id: "medium-15",
+    title: "Spring Boot Security Örneği",
+    shortDescription: "Security işlemi için daha önce yaptığım bir örnek üzerinden gitmek istiyorum. Link …",
+    link: "https://medium.com/@celalaygar/spring-boot-security-örneği-62f344124f7d",
+  },
+  {
+    id: "medium-16",
+    title: "Spring Boot, Spring MVC Anotasyon",
+    shortDescription: "Spring Boot üzerinde Spring mvc ile kullanılan bazı annotasyonlar anlatılacaktır.",
+    link: "https://medium.com/@celalaygar/spring-boot-ile-spring-mvc-1-478ebcce3756",
+  },
+];
+
 export const contactSocialLinks: SocialLink[] = [
   { id: "linkedin", name: "Linkedin", href: "https://www.linkedin.com/in/celalaygar/", iconType: "linkedin", gradient: "bg-blue-600/20", hoverColor: "group-hover:text-blue-400", urlDisplay: "linkedin.com/in/celalaygar" },
   { id: "github", name: "GitHub", href: "https://github.com/celalaygar", iconType: "github", gradient: "bg-gray-600/20", hoverColor: "group-hover:text-gray-400", urlDisplay: "github.com/celalaygar" },
