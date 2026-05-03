@@ -1,11 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import { useLanguage } from "@/components/language-provider";
 import { heroSocialLinks, tiktokStats } from "@/data";
 import { getSocialIcon } from "@/components/social-icons";
-import { HeroScene } from "@/components/three/hero-scene";
 import { ExternalLink, Download } from "lucide-react";
+
+const HeroScene = dynamic(
+  () => import("@/components/three/hero-scene").then((mod) => mod.HeroScene),
+  {
+    ssr: false,
+    loading: () => null,
+  }
+);
 
 const CV_VIEW_URL = "https://celalaygar.github.io/";
 const CV_DOWNLOAD_EN = "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/01.02.2026.Celal.Aygar.English.CV.pdf";

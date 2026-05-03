@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";
@@ -81,15 +81,20 @@ function FloatingParticles() {
 export function HeroScene() {
   return (
     <div className="absolute inset-0 -z-10">
-      <Canvas
-        camera={{ position: [0, 0, 5], fov: 60 }}
-        style={{ background: "transparent" }}
-        gl={{ alpha: true, antialias: true }}
-      >
-        <StarField />
-        <FloatingParticles />
-        <ambientLight intensity={0.5} />
-      </Canvas>
+      <Suspense fallback={null}>
+        <Canvas
+          camera={{ position: [0, 0, 5], fov: 60 }}
+          style={{ background: "transparent" }}
+          gl={{ alpha: true, antialias: true }}
+          onError={(e) => {
+            console.warn("WebGL error:", e);
+          }}
+        >
+          <StarField />
+          <FloatingParticles />
+          <ambientLight intensity={0.5} />
+        </Canvas>
+      </Suspense>
     </div>
   );
 }
