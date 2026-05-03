@@ -66,6 +66,9 @@ export const translations: Record<Language, Record<string, string>> = {
     mediumPageTitle: "All Medium Articles",
     aboutPageTitle: "About Me",
     contactPageTitle: "Contact Me",
+    cv_view: "View CV",
+    cv_download_en: "Download CV (EN)",
+    cv_download_tr: "Download CV (TR)",
 
     wb_domain_track_subtitle: "Coming Soon",
     wb_domain_track_desc: "Find Your Perfect Domain With Ease",
@@ -207,6 +210,9 @@ export const translations: Record<Language, Record<string, string>> = {
     mediumPageTitle: "Tüm Medium Yazıları",
     aboutPageTitle: "Hakkımda",
     contactPageTitle: "İletişim",
+    cv_view: "CV'yi Görüntüle",
+    cv_download_en: "CV İndir (EN)",
+    cv_download_tr: "CV İndir (TR)",
 
     wb_domain_track_subtitle: "Yakında",
     wb_domain_track_desc: "Mükemmel Alan Adınızı Kolayca Bulun",
