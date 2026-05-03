@@ -30,19 +30,21 @@ export function ContactSection({ compact }: ContactSectionProps) {
   return (
     <section id="contact" className="bg-gray-950 py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12 text-center"
-        >
-          <h2 className="mb-3 text-3xl font-bold text-white sm:text-4xl">
-            {t("contactTitle")}
-          </h2>
-          <p className="text-gray-400">{t("contact_subtitle")}</p>
-          <div className="mx-auto mt-3 h-1 w-20 rounded-full bg-gradient-to-r from-violet-500 to-purple-600" />
-        </motion.div>
+        {compact && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12 text-center"
+          >
+            <h2 className="mb-3 text-3xl font-bold text-white sm:text-4xl">
+              {t("contactTitle")}
+            </h2>
+            <p className="text-gray-400">{t("contact_subtitle")}</p>
+            <div className="mx-auto mt-3 h-1 w-20 rounded-full bg-gradient-to-r from-violet-500 to-purple-600" />
+          </motion.div>
+        )}
 
         {compact ? (
           /* Compact mode: Just show contact channels + CTA */
