@@ -37,17 +37,25 @@ export function HeroSection() {
           </p>
 
           {/* TikTok stats */}
-          <div className="mb-8 inline-flex items-center gap-6 rounded-2xl border border-white/10 bg-white/5 px-6 py-3 backdrop-blur-sm">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">{tiktokStats.followersDisplay}</div>
-              <div className="text-xs text-gray-400">Followers</div>
+          <a
+            href="https://www.tiktok.com/@openick.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mb-8 inline-flex items-center gap-5 rounded-2xl border border-pink-500/30 bg-pink-500/5 px-6 py-3 backdrop-blur-sm transition-all hover:border-pink-500/50 hover:bg-pink-500/10"
+          >
+            {getSocialIcon("tiktok", "h-5 w-5 text-pink-400")}
+            <div className="flex items-center gap-5">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">{tiktokStats.followersDisplay}</div>
+                <div className="text-xs text-gray-400">Followers</div>
+              </div>
+              <div className="h-8 w-px bg-white/20" />
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">{tiktokStats.likes}</div>
+                <div className="text-xs text-gray-400">Likes</div>
+              </div>
             </div>
-            <div className="h-8 w-px bg-white/20" />
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">{tiktokStats.likes}</div>
-              <div className="text-xs text-gray-400">Likes</div>
-            </div>
-          </div>
+          </a>
 
           {/* Social buttons */}
           <div className="flex flex-wrap items-center justify-center gap-3">
