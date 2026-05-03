@@ -57,27 +57,55 @@ export function Navbar() {
               );
             })}
             <div className="ml-4 flex items-center border-l border-white/10 pl-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setLanguage(language === "tr" ? "en" : "tr")}
-                className="text-sm font-semibold text-violet-400 hover:text-violet-300 hover:bg-white/10"
-              >
-                {language === "tr" ? "EN" : "TR"}
-              </Button>
+              <div className="flex items-center gap-1 rounded-lg bg-white/5 p-0.5">
+                <button
+                  onClick={() => setLanguage("tr")}
+                  className={`rounded-md px-3 py-1 text-xs font-bold transition-all ${
+                    language === "tr"
+                      ? "bg-violet-500 text-white shadow-md"
+                      : "text-gray-400 hover:text-white"
+                  }`}
+                >
+                  TR
+                </button>
+                <button
+                  onClick={() => setLanguage("en")}
+                  className={`rounded-md px-3 py-1 text-xs font-bold transition-all ${
+                    language === "en"
+                      ? "bg-violet-500 text-white shadow-md"
+                      : "text-gray-400 hover:text-white"
+                  }`}
+                >
+                  EN
+                </button>
+              </div>
             </div>
           </div>
 
           {/* Mobile toggle */}
           <div className="flex items-center gap-2 md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setLanguage(language === "tr" ? "en" : "tr")}
-              className="text-sm font-semibold text-violet-400 hover:text-violet-300"
-            >
-              {language === "tr" ? "EN" : "TR"}
-            </Button>
+            <div className="flex items-center gap-1 rounded-lg bg-white/5 p-0.5">
+              <button
+                onClick={() => setLanguage("tr")}
+                className={`rounded-md px-2.5 py-1 text-xs font-bold transition-all ${
+                  language === "tr"
+                    ? "bg-violet-500 text-white shadow-md"
+                    : "text-gray-400 hover:text-white"
+                }`}
+              >
+                TR
+              </button>
+              <button
+                onClick={() => setLanguage("en")}
+                className={`rounded-md px-2.5 py-1 text-xs font-bold transition-all ${
+                  language === "en"
+                    ? "bg-violet-500 text-white shadow-md"
+                    : "text-gray-400 hover:text-white"
+                }`}
+              >
+                EN
+              </button>
+            </div>
             <Button
               variant="ghost"
               size="icon"
