@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import { useLanguage } from "@/components/language-provider";
 import { heroSocialLinks, tiktokStats } from "@/data";
 import { getSocialIcon } from "@/components/social-icons";
-import { Download } from "lucide-react";
+import { Download, ExternalLink } from "lucide-react";
 
 const HeroScene = dynamic(
   () => import("@/components/three/hero-scene").then((mod) => mod.HeroScene),
@@ -15,6 +15,7 @@ const HeroScene = dynamic(
   }
 );
 
+const CV_VIEW_URL = "https://celalaygar.github.io/";
 const CV_DOWNLOAD_EN = "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/01.02.2026.Celal.Aygar.English.CV.pdf";
 const CV_DOWNLOAD_TR = "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/01.02.2026.Celal.Aygar.Turkish.CV.pdf";
 
@@ -87,6 +88,15 @@ export function HeroSection() {
 
           {/* CV buttons */}
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href={CV_VIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl border border-violet-500/30 bg-violet-500/10 px-5 py-2.5 text-sm font-semibold text-violet-400 transition-all hover:scale-105 hover:border-violet-500/50 hover:bg-violet-500/20"
+            >
+              <ExternalLink className="h-4 w-4" />
+              {t("cv_view")}
+            </a>
             <a
               href={CV_DOWNLOAD_EN}
               target="_blank"

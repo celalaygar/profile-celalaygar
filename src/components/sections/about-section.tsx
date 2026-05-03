@@ -2,11 +2,15 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/components/language-provider";
 import { skills } from "@/data";
 
 const PROFILE_IMAGE = "https://avatars.githubusercontent.com/u/11775341?v=4";
+
+const CV_VIEW_URL = "https://celalaygar.github.io/";
+const CV_DOWNLOAD_EN = "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/01.02.2026.Celal.Aygar.English.CV.pdf";
+const CV_DOWNLOAD_TR = "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/01.02.2026.Celal.Aygar.Turkish.CV.pdf";
 
 interface AboutSectionProps {
   compact?: boolean;
@@ -51,6 +55,37 @@ export function AboutSection({ compact }: AboutSectionProps) {
           </div>
           <h3 className="text-xl font-bold text-white">Hacı Celal Aygar</h3>
           <p className="text-sm text-violet-400">Full Stack Developer & Java Developer</p>
+
+          {/* CV buttons */}
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href={CV_VIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl border border-violet-500/30 bg-violet-500/10 px-5 py-2.5 text-sm font-semibold text-violet-400 transition-all hover:scale-105 hover:border-violet-500/50 hover:bg-violet-500/20"
+            >
+              <ExternalLink className="h-4 w-4" />
+              {t("cv_view")}
+            </a>
+            <a
+              href={CV_DOWNLOAD_EN}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-5 py-2.5 text-sm font-semibold text-emerald-400 transition-all hover:scale-105 hover:border-emerald-500/50 hover:bg-emerald-500/20"
+            >
+              <Download className="h-4 w-4" />
+              {t("cv_download_en")}
+            </a>
+            <a
+              href={CV_DOWNLOAD_TR}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl border border-blue-500/30 bg-blue-500/10 px-5 py-2.5 text-sm font-semibold text-blue-400 transition-all hover:scale-105 hover:border-blue-500/50 hover:bg-blue-500/20"
+            >
+              <Download className="h-4 w-4" />
+              {t("cv_download_tr")}
+            </a>
+          </div>
         </motion.div>
 
         <div className={`grid gap-10 ${compact ? "lg:grid-cols-2" : "lg:grid-cols-2"}`}>
