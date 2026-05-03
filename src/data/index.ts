@@ -227,7 +227,6 @@ export interface SocialLink {
 }
 
 export const heroSocialLinks: SocialLink[] = [
-  { id: "resume", name: "btn_resume", href: "https://celalaygar.github.io/", iconType: "website", gradient: "bg-gradient-to-r from-blue-500 to-purple-600", hoverColor: "hover:opacity-90" },
   { id: "github", name: "btn_github", href: "https://github.com/celalaygar", iconType: "github", gradient: "bg-gradient-to-r from-gray-700 to-gray-900", hoverColor: "hover:opacity-90" },
   { id: "youtube", name: "btn_youtube", href: "https://www.youtube.com/@celalaygar", iconType: "youtube", gradient: "bg-gradient-to-r from-red-600 to-red-800", hoverColor: "hover:opacity-90" },
   { id: "tiktok", name: "btn_tiktok", href: "https://www.tiktok.com/@openick.io", iconType: "tiktok", gradient: "bg-black", hoverColor: "hover:opacity-90" },
