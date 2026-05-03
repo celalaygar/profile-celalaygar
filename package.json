@@ -3,14 +3,10 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
-    "build": "next build && node scripts/postbuild.js",
-    "start": "node .next/standalone/server.js",
+    "build": "next build",
+    "dev": "next dev",
     "lint": "eslint .",
-    "db:push": "prisma db push",
-    "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev",
-    "db:reset": "prisma migrate reset"
+    "start": "next start"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
