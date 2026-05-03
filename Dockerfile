@@ -4,7 +4,7 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 # package.json ve package-lock.json dosyalarını kopyala
-COPY package.json package-lock.json ./
+COPY package.json ./
 
 # Bağımlılıkları yükle
 RUN npm install
