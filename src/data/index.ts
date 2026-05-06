@@ -128,11 +128,11 @@ export const projects: Project[] = [
   {
     id: "Job-Ts",
     title: "Job Ts",
-    subtitleKey: "job_ts_subtitle",
-    descriptionKey: "job_ts_desc",
+    subtitleKey: "job_tracking_subtitle",
+    descriptionKey: "job_tracking_desc",
     href: "https://jobts.probablythebestever.info/",
-    iconName: "Braces",
-    gradient: "primary",
+    iconName: "Briefcase",
+    gradient: "red",
   },
 ];
 
