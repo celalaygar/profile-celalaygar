@@ -117,7 +117,7 @@ export const projects: Project[] = [
     gradient: "accent",
   },
   {
-    id: "Job-Ts",
+    id: "Lingua-Bubble",
     title: "Lingua Bubble",
     subtitleKey: "lingua_bubble_subtitle",
     descriptionKey: "lingua_bubble_desc",
