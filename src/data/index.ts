@@ -112,7 +112,7 @@ export const projects: Project[] = [
     title: "Job Tracking System V2",
     subtitleKey: "job_tracking_subtitle",
     descriptionKey: "job_tracking_desc",
-    href: "https://celalaygar.github.io/main/project/job-tracking-system-v2/",
+    href: "https://jobts.probablythebestever.info/",
     iconName: "Briefcase",
     gradient: "accent",
   },
