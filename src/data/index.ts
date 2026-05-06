@@ -72,8 +72,8 @@ export const subjectOptions: SubjectOption[] = [
 
 export const tiktokStats = {
   followers: 10700,
-  followersDisplay: "10,700",
-  likes: "38.4K",
+  followersDisplay: "11,375",
+  likes: "41.7K",
 };
 
 export type GradientVariant = "primary" | "secondary" | "accent" | "yellow" | "green";
