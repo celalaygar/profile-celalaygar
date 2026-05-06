@@ -109,7 +109,7 @@ export const projects: Project[] = [
   },  
   {
     id: "job-tracking-v2",
-    title: "Job Tracking System V2",
+    title: "Job TS",
     subtitleKey: "job_tracking_subtitle",
     descriptionKey: "job_tracking_desc",
     href: "https://jobts.probablythebestever.info/",
