@@ -229,12 +229,12 @@ export interface SocialLink {
 export const heroSocialLinks: SocialLink[] = [
   { id: "github", name: "btn_github", href: "https://github.com/celalaygar", iconType: "github", gradient: "bg-gradient-to-r from-gray-700 to-gray-900", hoverColor: "hover:opacity-90" },
   { id: "youtube", name: "btn_youtube", href: "https://www.youtube.com/@celalaygar", iconType: "youtube", gradient: "bg-gradient-to-r from-red-600 to-red-800", hoverColor: "hover:opacity-90" },
-  { id: "tiktok", name: "btn_tiktok", href: "https://www.tiktok.com/@openick.io", iconType: "tiktok", gradient: "bg-black   border border-white border-2 ", hoverColor: "hover:opacity-90" },
+  { id: "tiktok", name: "btn_tiktok", href: "https://www.tiktok.com/@openick.io", iconType: "tiktok", gradient: "bg-black   border border-white border-1 ", hoverColor: "hover:opacity-90" },
 ];
 
 export const socialSectionLinks: SocialLink[] = [
   { id: "youtube", name: "YouTube", href: "https://www.youtube.com/@celalaygar", iconType: "youtube", gradient: "bg-gradient-to-r from-red-600 to-red-800", hoverColor: "hover:opacity-90" },
-  { id: "tiktok", name: "TikTok", href: "https://www.tiktok.com/@openick.io", iconType: "tiktok", gradient: "bg-black  border border-white border-2 ", hoverColor: "hover:opacity-90", subtitle: "9785 Followers" },
+  { id: "tiktok", name: "TikTok", href: "https://www.tiktok.com/@openick.io", iconType: "tiktok", gradient: "bg-black  border border-white border-1 ", hoverColor: "hover:opacity-90", subtitle: "9785 Followers" },
   { id: "linkedin", name: "LinkedIn", href: "https://www.linkedin.com/in/celalaygar/", iconType: "linkedin", gradient: "bg-gradient-to-r from-blue-600 to-blue-800", hoverColor: "hover:opacity-90" },
   { id: "stackoverflow", name: "Stack Overflow", href: "https://stackoverflow.com/users/12014524/hac%c4%b1-celal-aygar", iconType: "stackoverflow", gradient: "bg-gradient-to-r from-orange-500 to-orange-700", hoverColor: "hover:opacity-90" },
   { id: "medium", name: "Medium", href: "https://medium.com/@celalaygar", iconType: "medium", gradient: "bg-gradient-to-r from-gray-800 to-gray-950", hoverColor: "hover:opacity-90" },
