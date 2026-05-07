@@ -76,7 +76,7 @@ export const tiktokStats = {
   likes: "41.7K",
 };
 
-export type GradientVariant = "primary" | "secondary" | "accent" | "yellow" | "green";
+export type GradientVariant = "primary" | "secondary" | "accent" | "yellow" | "red"   | "green";
 
 export interface Project {
   id: string;
