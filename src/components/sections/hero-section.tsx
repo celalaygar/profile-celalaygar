@@ -51,7 +51,7 @@ export function HeroSection() {
 
           {/* TikTok stats */}
           <a
-            href="https://www.tiktok.com/@openick.io"
+            href="https://www.tiktok.com/@wixtory.com"
             target="_blank"
             rel="noopener noreferrer"
             className="mb-8 inline-flex items-center gap-5 rounded-2xl border border-pink-500/30 bg-pink-500/5 px-6 py-3 backdrop-blur-sm transition-all hover:border-pink-500/50 hover:bg-pink-500/10"
