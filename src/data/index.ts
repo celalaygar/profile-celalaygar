@@ -232,6 +232,10 @@ export const heroSocialLinks: SocialLink[] = [
   { id: "tiktok", name: "btn_tiktok", href: "https://www.tiktok.com/@wixtory.com", iconType: "tiktok", gradient: "bg-gradient-to-r from-black to-gray-900  ", hoverColor: "hover:opacity-90" },
 ];
 
+export const homeSocialLink: SocialLink[] = [
+  { id: "tiktok", name: "btn_tiktok", href: "https://www.tiktok.com/@wixtory.com", iconType: "tiktok", gradient: "bg-gradient-to-r from-black to-gray-900  ", hoverColor: "hover:opacity-90" },
+];
+
 export const socialSectionLinks: SocialLink[] = [
   { id: "youtube", name: "YouTube", href: "https://www.youtube.com/@celalaygar", iconType: "youtube", gradient: "bg-gradient-to-r from-red-600 to-red-800", hoverColor: "hover:opacity-90" },
   { id: "tiktok", name: "TikTok", href: "https://www.tiktok.com/@wixtory.com", iconType: "tiktok", gradient: "bg-gradient-to-r from-black to-gray-900   ", hoverColor: "hover:opacity-90", subtitle: "9785 Followers" },
