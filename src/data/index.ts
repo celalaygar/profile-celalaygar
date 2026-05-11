@@ -354,6 +354,6 @@ export const contactSocialLinks: SocialLink[] = [
   { id: "youtube", name: "Youtube", href: "https://www.youtube.com/@celalaygar", iconType: "youtube", gradient: "bg-red-600/20", hoverColor: "group-hover:text-red-400", urlDisplay: "youtube.com/@celalaygar" },
   { id: "hackerrank", name: "HackerRank", href: "https://hackerrank.com/celalaygar", iconType: "hackerrank", gradient: "bg-green-600/20", hoverColor: "group-hover:text-green-400", urlDisplay: "hackerrank.com/celalaygar" },
   { id: "stackoverflow", name: "StackOverflow", href: "https://stackoverflow.com/users/12014524", iconType: "stackoverflow", gradient: "bg-orange-600/20", hoverColor: "group-hover:text-orange-400", urlDisplay: "stackoverflow.com/users/12014524" },
-  { id: "tiktok", name: "TikTok", href: "https://www.tiktok.com/@wixtoru.com", iconType: "tiktok", gradient: "bg-pink-600/20", hoverColor: "group-hover:text-pink-400", urlDisplay: "tiktok.com/@openick.io" },
+  { id: "tiktok", name: "TikTok", href: "https://www.tiktok.com/@wixtoru.com", iconType: "tiktok", gradient: "bg-pink-600/20", hoverColor: "group-hover:text-pink-400", urlDisplay: "tiktok.com/@wixtory.com" },
   { id: "instagram", name: "Instagram", href: "https://www.instagram.com/celalaygar", iconType: "instagram", gradient: "bg-pink-600/20", hoverColor: "group-hover:text-pink-400", urlDisplay: "instagram.com/celalaygar" },
 ];
