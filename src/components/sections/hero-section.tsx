@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { useLanguage } from "@/components/language-provider";
-import { heroSocialLinks, tiktokStats } from "@/data";
+
+import { heroSocialLinks, tiktokStats, homeSocialLink } from "@/data";
 import { getSocialIcon } from "@/components/social-icons";
 import { Download, ExternalLink } from "lucide-react";
 
@@ -51,7 +52,7 @@ export function HeroSection() {
 
           {/* TikTok stats */}
           <a
-            href="https://www.tiktok.com/@wixtory.com"
+            href={homeSocialLink[0].href}
             target="_blank"
             rel="noopener noreferrer"
             className="mb-8 inline-flex items-center gap-5 rounded-2xl border border-pink-500/30 bg-pink-500/5 px-6 py-3 backdrop-blur-sm transition-all hover:border-pink-500/50 hover:bg-pink-500/10"
