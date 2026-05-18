@@ -68,10 +68,12 @@ export const translations: Record<Language, Record<string, string>> = {
     cv_view: "View CV",
     cv_download_en: "Download CV (EN)",
     cv_download_tr: "Download CV (TR)",
-
+    wixtory_offical_subtitle: 'Wixtory Offical Page',
+    wixtory_offical_desc: "Wixtory İnformation and Wixtory's Projects page"
+    
     wb_domain_track_subtitle: "Coming Soon",
     wb_domain_track_desc: "Find Your Perfect Domain With Ease",
-    wb_language_box_subtitle: "Coming Soon",
+    wb_language_box_subtitle: "language learning app",
     wb_language_box_desc:
       "A language learning app with interactive exercises and quizzes.",
     domain_track_subtitle: "Domain Intelligence Tool",
@@ -212,9 +214,12 @@ export const translations: Record<Language, Record<string, string>> = {
     cv_download_en: "CV İndir (EN)",
     cv_download_tr: "CV İndir (TR)",
 
+    wixtory_offical_subtitle: 'Wixtory Resmi Sayfası',
+    wixtory_offical_desc: "Wixtory Bilgi ve Wixtory Projeleri sayfası"
+        
     wb_domain_track_subtitle: "Yakında",
     wb_domain_track_desc: "Mükemmel Alan Adınızı Kolayca Bulun",
-    wb_language_box_subtitle: "Yakında",
+    wb_language_box_subtitle: "Dil öğrenme uygulaması",
     wb_language_box_desc: "Etkileşimli alıştırmalar ve testlerle dil öğrenme uygulaması.",
     domain_track_subtitle: "Alan Adı İstihbarat Aracı",
     domain_track_desc: "Alan adı kullanılabilirliğini kontrol edin ve WHOIS kayıt bilgilerini görüntüleyin.",
