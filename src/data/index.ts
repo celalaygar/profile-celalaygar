@@ -94,7 +94,7 @@ export const projects: Project[] = [
     title: "Wixtory: Language Box",
     subtitleKey: "wb_language_box_subtitle",
     descriptionKey: "wb_language_box_desc",
-    href: "https://celalaygar.github.io/main/project/language-box/",
+    href: "https://language-box.wixtory.com/",
     iconName: "Languages",
     gradient: "yellow",
   },
