@@ -103,7 +103,7 @@ export const projects: Project[] = [
     title: "Wixtory Domain Track",
     subtitleKey: "wb_domain_track_subtitle",
     descriptionKey: "wb_domain_track_desc",
-    href: "https://celalaygar.github.io/main/project/wixbook-domain-track/",
+    href: "https://domain-track.wixtory.com/",
     iconName: "Globe2",
     gradient: "green",
   },  
