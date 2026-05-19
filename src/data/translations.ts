@@ -70,6 +70,12 @@ export const translations: Record<Language, Record<string, string>> = {
     cv_download_tr: "Download CV (TR)",
     wixtory_offical_subtitle: 'Wixtory Offical Page',
     wixtory_offical_desc: "Wixtory İnformation and Wixtory's Projects page",
+
+
+    personel_web_subtitle: 'Personel Web Page',
+    personel_web_desc: 'My personal website where I share information about my personal details, blog posts, and projects.',
+
+
     
     wb_domain_track_subtitle: "Coming Soon",
     wb_domain_track_desc: "Find Your Perfect Domain With Ease",
@@ -214,6 +220,10 @@ export const translations: Record<Language, Record<string, string>> = {
     cv_download_en: "CV İndir (EN)",
     cv_download_tr: "CV İndir (TR)",
 
+    personel_web_subtitle: 'Kişisel Web Site',
+    personel_web_desc: 'Kişisel bilgilerim, blog yazılarım ve projelerim hakkında bilgi paylaşan kişisel Web sitem',
+
+    
     wixtory_offical_subtitle: 'Wixtory Resmi Sayfası',
     wixtory_offical_desc: "Wixtory Bilgi ve Wixtory Projeleri sayfası",
         
