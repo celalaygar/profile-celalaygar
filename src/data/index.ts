@@ -134,6 +134,15 @@ export const projects: Project[] = [
     iconName: "Briefcase",
     gradient: "red",
   },
+  {
+    id: "wixtory-com",
+    title: "Personel Web Page",
+    subtitleKey: "personel_web_subtitle",
+    descriptionKey: "personel_web_desc",
+    href: "https://celalaygar.com/",
+    iconName: "Briefcase",
+    gradient: "yellow",
+  },
 ];
 
 export interface Game {
